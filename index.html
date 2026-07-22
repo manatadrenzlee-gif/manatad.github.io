@@ -11,17 +11,13 @@
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
-
     html {
       scroll-behavior: smooth;
     }
-
     body {
       background: #f2f2f2;
       color: #222;
     }
-
-    /* ---------- HEADER ---------- */
     header {
       position: relative;
       background: #111;
@@ -29,18 +25,15 @@
       text-align: center;
       padding: 25px 15px;
     }
-
     header h1 {
       font-size: 28px;
       letter-spacing: 1px;
     }
-
     header p {
       margin-top: 5px;
       font-size: 14px;
       color: #bbb;
     }
-
     .about-link {
       position: absolute;
       top: 18px;
@@ -56,14 +49,11 @@
       transition: background 0.2s ease, transform 0.2s ease;
       letter-spacing: 0.5px;
     }
-
     .about-link:hover {
       background: #fff;
       color: #111;
       transform: translateY(-1px);
     }
-
-    /* ---------- SLIDER ---------- */
     .slider-container {
       position: relative;
       max-width: 900px;
@@ -73,25 +63,23 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       background: #000;
     }
-
     .slides {
       display: flex;
       transition: transform 0.5s ease-in-out;
+      width: 100%;
     }
-
     .slide {
       min-width: 100%;
       position: relative;
+      flex-shrink: 0;
     }
-
     .slide img {
       width: 100%;
       height: 450px;
       object-fit: cover;
       display: block;
-      background: #2a2a2a; /* fallback while images load */
+      background: #2a2a2a;
     }
-
     .caption {
       position: absolute;
       bottom: 0;
@@ -101,16 +89,13 @@
       color: #fff;
       padding: 15px;
     }
-
     .caption h3 {
       font-size: 20px;
     }
-
     .caption p {
       font-size: 14px;
       margin-top: 4px;
     }
-
     .arrow {
       position: absolute;
       top: 50%;
@@ -123,24 +108,17 @@
       border-radius: 50%;
       user-select: none;
       transition: background 0.2s;
+      z-index: 10;
     }
-
     .arrow:hover {
       background: #fff;
     }
-
-    .prev {
-      left: 15px;
-    }
-    .next {
-      right: 15px;
-    }
-
+    .prev { left: 15px; }
+    .next { right: 15px; }
     .dots {
       text-align: center;
       margin-top: 12px;
     }
-
     .dot {
       display: inline-block;
       width: 12px;
@@ -151,12 +129,9 @@
       cursor: pointer;
       transition: background 0.2s;
     }
-
     .dot.active {
       background: #111;
     }
-
-    /* ---------- FOOTER ---------- */
     footer {
       background: #111;
       color: #eee;
@@ -164,49 +139,40 @@
       margin-top: 40px;
       scroll-margin-top: 20px;
     }
-
     .footer-content {
       max-width: 800px;
       margin: 0 auto;
       text-align: center;
     }
-
     footer h2 {
       margin-bottom: 10px;
       font-size: 22px;
     }
-
     footer p {
       font-size: 14px;
       line-height: 1.6;
       color: #ccc;
       margin-bottom: 5px;
     }
-
     .info-list {
       margin-top: 15px;
       font-size: 14px;
       color: #fff;
     }
-
     .info-list span {
       display: block;
       margin: 4px 0;
     }
-
-    /* ---------- REVIEWS ---------- */
     .reviews-section {
       max-width: 900px;
       margin: 40px auto 0;
       padding: 0 15px;
     }
-
     .reviews-section h2 {
       text-align: center;
       font-size: 22px;
       margin-bottom: 4px;
     }
-
     .reviews-note {
       text-align: center;
       font-size: 12px;
@@ -214,34 +180,25 @@
       margin-bottom: 18px;
       font-style: italic;
     }
-
     .reviews-track-wrap {
       overflow: hidden;
       position: relative;
       -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
       mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
     }
-
     .reviews-track {
       display: flex;
       gap: 16px;
       width: max-content;
       animation: scrollReviews 30s linear infinite;
     }
-
     .reviews-track-wrap:hover .reviews-track {
       animation-play-state: paused;
     }
-
     @keyframes scrollReviews {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
-
     .review-card {
       background: #fff;
       border-radius: 10px;
@@ -252,35 +209,29 @@
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
     .review-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
     }
-
     .review-card.selected {
       outline: 2px solid #111;
     }
-
     .review-stars {
       color: #f5a623;
       font-size: 15px;
       margin-bottom: 6px;
     }
-
     .review-text {
       font-size: 13px;
       line-height: 1.5;
       color: #333;
       margin-bottom: 10px;
     }
-
     .review-author {
       font-size: 12px;
       font-weight: bold;
       color: #111;
     }
-
     .review-author span {
       display: block;
       font-weight: normal;
@@ -288,12 +239,8 @@
       font-size: 11px;
       margin-top: 2px;
     }
-
-    /* small fix for mobile */
     @media (max-width: 600px) {
-      .slide img {
-        height: 280px;
-      }
+      .slide img { height: 280px; }
       .about-link {
         top: 10px;
         right: 10px;
@@ -311,12 +258,11 @@
     <p>Sportbikes for Sale</p>
   </header>
 
-  <!-- SLIDER -->
   <div class="slider-container" id="sliderContainer">
     <div class="slides" id="slides">
 
       <div class="slide">
-        <img src="https://cdn.pixabay.com/photo/2020/10/01/09/10/motorcycle-5618170_1280.jpg" alt="Yamaha YZF-R6">
+        <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=900&h=450&fit=crop&crop=center" alt="Yamaha YZF-R6">
         <div class="caption">
           <h3>Yamaha YZF-R6</h3>
           <p>For Sale — Price: ₱250,000 (Negotiable)</p>
@@ -324,7 +270,7 @@
       </div>
 
       <div class="slide">
-        <img src="https://cdn.pixabay.com/photo/2016/05/23/10/01/motorcycle-1406611_1280.jpg" alt="Kawasaki Ninja 650">
+        <img src="https://images.unsplash.com/photo-1621721592843-0f8c9f1e6f9e?w=900&h=450&fit=crop&crop=center" alt="Kawasaki Ninja 650">
         <div class="caption">
           <h3>Kawasaki Ninja 650</h3>
           <p>For Sale — Price: ₱230,000 (Negotiable)</p>
@@ -332,7 +278,7 @@
       </div>
 
       <div class="slide">
-        <img src="https://cdn.pixabay.com/photo/2019/01/13/07/25/motorcycle-3929355_1280.jpg" alt="Honda CBR600RR">
+        <img src="https://images.unsplash.com/photo-1592861954493-b6a8b3d2b8b7?w=900&h=450&fit=crop&crop=center" alt="Honda CBR600RR">
         <div class="caption">
           <h3>Honda CBR600RR</h3>
           <p>For Sale — Price: ₱280,000 (Negotiable)</p>
@@ -340,7 +286,7 @@
       </div>
 
       <div class="slide">
-        <img src="https://cdn.pixabay.com/photo/2017/09/10/04/01/motorcycle-2734229_1280.jpg" alt="Suzuki GSX-R750">
+        <img src="https://images.unsplash.com/photo-1568751022559-8c3cf6b20e1f?w=900&h=450&fit=crop&crop=center" alt="Suzuki GSX-R750">
         <div class="caption">
           <h3>Suzuki GSX-R750</h3>
           <p>For Sale — Price: ₱265,000 (Negotiable)</p>
@@ -355,7 +301,6 @@
 
   <div class="dots" id="dots"></div>
 
-  <!-- REVIEWS -->
   <section class="reviews-section">
     <h2>Buyer Reviews</h2>
     <p class="reviews-note">Sample placeholder reviews — swap in real buyer feedback here</p>
@@ -364,7 +309,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer id="about">
     <div class="footer-content">
       <h2>About Me</h2>
@@ -374,7 +318,6 @@
         above — if you're interested in any of them, feel free to reach
         out to me using the contact details below and lastly i love latina's girl.
       </p>
-
       <div class="info-list">
         <span>📞 Contact Number: 0922ikawbahalasapito</span>
         <span>📧 Email: renzlee.manatad@example.com</span>
@@ -386,14 +329,12 @@
 
   <script>
     (function() {
-      // ---------- SLIDER ----------
       const slidesContainer = document.getElementById('slides');
       const slides = document.querySelectorAll('.slide');
       const dotsContainer = document.getElementById('dots');
       let currentIndex = 0;
       let autoSlideTimer = null;
 
-      // build dots
       slides.forEach((_, i) => {
         const dot = document.createElement('span');
         dot.classList.add('dot');
@@ -405,12 +346,12 @@
       const dots = document.querySelectorAll('.dot');
 
       function updateSlide() {
-        slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        slidesContainer.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
         dots.forEach(d => d.classList.remove('active'));
         dots[currentIndex].classList.add('active');
       }
 
-      function changeSlide(direction) {
+      window.changeSlide = function(direction) {
         currentIndex += direction;
         if (currentIndex < 0) currentIndex = slides.length - 1;
         if (currentIndex >= slides.length) currentIndex = 0;
@@ -429,13 +370,13 @@
           clearInterval(autoSlideTimer);
           autoSlideTimer = null;
         }
-        autoSlideTimer = setInterval(() => changeSlide(1), 5000);
+        autoSlideTimer = setInterval(() => {
+          window.changeSlide(1);
+        }, 5000);
       }
 
-      // initial autoplay
       resetAutoSlide();
 
-      // swipe / drag support
       const sliderContainer = document.getElementById('sliderContainer');
       let startX = 0;
       let isDragging = false;
@@ -448,12 +389,11 @@
       function handleDragEnd(clientX) {
         if (!isDragging) return;
         const diff = startX - clientX;
-        if (diff > 50) changeSlide(1);
-        else if (diff < -50) changeSlide(-1);
+        if (diff > 50) window.changeSlide(1);
+        else if (diff < -50) window.changeSlide(-1);
         isDragging = false;
       }
 
-      // touch
       sliderContainer.addEventListener('touchstart', (e) => {
         handleDragStart(e.touches[0].clientX);
       });
@@ -462,22 +402,19 @@
         handleDragEnd(e.changedTouches[0].clientX);
       });
 
-      // mouse
       sliderContainer.addEventListener('mousedown', (e) => {
         handleDragStart(e.clientX);
-        e.preventDefault(); // prevent text selection
+        e.preventDefault();
       });
 
       sliderContainer.addEventListener('mouseup', (e) => {
         handleDragEnd(e.clientX);
       });
 
-      // prevent dragging out of container
       sliderContainer.addEventListener('mouseleave', () => {
         isDragging = false;
       });
 
-      // ---------- REVIEWS (infinite scroll) ----------
       const sampleReviews = [
         { name: "Umpad James", loc: "Kalolo", text: "Hayabutaw 1000cc — Smooth transaction, bike was exactly as described." },
         { name: "Richielou Padildo", loc: "Mactan", text: "XRM 1250cc — Seller was responsive and honest about the bike's condition." },
@@ -504,13 +441,12 @@
       }
 
       const reviewsTrack = document.getElementById('reviewsTrack');
-      // duplicate for seamless loop
       [...sampleReviews, ...sampleReviews].forEach(r => {
         reviewsTrack.appendChild(buildReviewCard(r));
       });
 
     })();
   </script>
+
 </body>
 </html>
-```
