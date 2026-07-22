@@ -1,1 +1,0 @@
-# manatad.github.io
